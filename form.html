@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>MFB Account Opening — Application Form</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+</head>
+<body>
+  <!-- Skip link for keyboard users -->
+  <a href="#main">Skip to content</a>
+
+  <header role="banner">
+    <h1>Individual Account Opening</h1>
+    <p id="intro">This form should be completed in CAPITAL LETTERS. Characters and mark should be similar in style to the following</p>
+  </header>
+
+  <nav aria-label="Primary">
+    <ul>
+      <li><a href="form.html" aria-current="page">Apply</a></li>
+      <li><a href="review.html">Review entered details (sample)</a></li>
+    </ul>
+  </nav>
+
+  <main id="main" tabindex="0" role="main" aria-labelledby="form-heading">
+    <h2 id="form-heading">Account Opening Form</h2>
+
+    <form action="review.html" method="get" novalidate aria-describedby="form-instructions">
+      <p id="form-instructions">All fields marked <span aria-hidden="true">*</span><span class="sr-only"> required</span> are required.</p>
+
+      <!-- Personal Information -->
+      <section aria-labelledby="personal-heading">
+        <h3 id="personal-heading">Personal Information</h3>
+
+        <fieldset>
+          <legend>Full name & basic details</legend>
+
+          <p>
+            <label for="fullName">Full name (as on ID) <span aria-hidden="true">*</span></label><br />
+            <input id="fullName" name="fullName" type="text" required autocomplete="name" placeholder="Surname Firstname Middlename" />
+          </p>
+
+          <p>
+            <label for="dob">Date of birth <span aria-hidden="true">*</span></label><br />
+            <input id="dob" name="dob" type="date" required />
+          </p>
+
+          <p>
+            <label for="gender">Gender</label><br />
+            <select id="gender" name="gender" autocomplete="sex">
+              <option value="">Prefer not to say</option>
+              <option value="female">Female</option>
+              <option value="male">Male</option>
+              <option value="nonbinary">Non-binary</option>
+              <option value="other">Other</option>
+            </select>
+          </p>
+
+          <p>
+            <label for="maritalStatus">Marital status</label><br />
+            <select id="maritalStatus" name="maritalStatus">
+              <option value="">Select</option>
+              <option>Single</option>
+              <option>Married</option>
+              <option>Divorced</option>
+              <option>Widowed</option>
+            </select>
+          </p>
+
+          <p>
+            <label for="nationality">Nationality</label><br />
+            <input id="nationality" name="nationality" type="text" autocomplete="country-name" />
+          </p>
+        </fieldset>
+
+        <fieldset>
+          <legend>Contact & Address</legend>
+
+          <p>
+            <label for="resAddress">Residential address (permanent)</label><br />
+            <textarea id="resAddress" name="resAddress" rows="3" autocomplete="street-address"></textarea>
+          </p>
+
+          <p>
+            <label for="currAddress">Current address (only if different)</label><br />
+            <textarea id="currAddress" name="currAddress" rows="3"></textarea>
+          </p>
+
+          <p>
+            <label for="phone">Phone number <span aria-hidden="true">*</span></label><br />
+            <input id="phone" name="phone" type="tel" required autocomplete="tel" placeholder="+234 800 000 0000" />
+          </p>
+
+          <p>
+            <label for="email">Email address</label><br />
+            <input id="email" name="email" type="email" autocomplete="email" placeholder="name@example.com" />
+          </p>
+        </fieldset>
+      </section>
+
+      <!-- Identification -->
+      <section aria-labelledby="id-heading">
+        <h3 id="id-heading">Identification</h3>
+
+        <fieldset>
+          <legend>Official identification</legend>
+
+          <p>
+            <label for="idType">Means of identification <span aria-hidden="true">*</span></label><br />
+            <select id="idType" name="idType" required>
+              <option value="">Select ID type</option>
+              <option value="national_id">National ID</option>
+              <option value="passport">Passport</option>
+              <option value="drivers_license">Driver's License</option>
+              <option value="voters_card">Voter's Card</option>
+              <option value="other">Other</option>
+            </select>
+          </p>
+
+          <p>
+            <label for="idNumber">ID number</label><br />
+            <input id="idNumber" name="idNumber" type="text" />
+          </p>
+
+          <p>
+            <label for="issueDate">Issue date</label><br />
+            <input id="issueDate" name="issueDate" type="date" />
+          </p>
+
+          <p>
+            <label for="expiryDate">Expiry date</label><br />
+            <input id="expiryDate" name="expiryDate" type="date" />
+          </p>
+
+          <p>
+            <label for="placeOfIssue">Place of issue</label><br />
+            <input id="placeOfIssue" name="placeOfIssue" type="text" />
+          </p>
+
+          <p>
+            <label for="tin">Tax Identification Number (TIN)</label><br />
+            <input id="tin" name="tin" type="text" inputmode="numeric" />
+          </p>
+
+          <p>
+            <label for="bvn">Bank Verification Number (BVN)</label><br />
+            <input id="bvn" name="bvn" type="text" inputmode="numeric" pattern="\d{11}" aria-describedby="bvn-help" />
+            <small id="bvn-help">11 digits (where applicable)</small>
+          </p>
+        </fieldset>
+      </section>
+
+      <!-- Employment & Financial -->
+      <section aria-labelledby="emp-heading">
+        <h3 id="emp-heading">Employment & Financial Information</h3>
+
+        <fieldset>
+          <legend>Employment</legend>
+
+          <p>
+            <label for="occupation">Occupation / Job title</label><br />
+            <input id="occupation" name="occupation" type="text" />
+          </p>
+
+          <p>
+            <label for="employer">Employer / Business name</label><br />
+            <input id="employer" name="employer" type="text" />
+          </p>
+
+          <p>
+            <label for="employerAddress">Employer / Business address</label><br />
+            <textarea id="employerAddress" name="employerAddress" rows="2"></textarea>
+          </p>
+        </fieldset>
+
+        <fieldset>
+          <legend>Financial details</legend>
+
+          <p>
+            <label for="incomeRange">Annual income range</label><br />
+            <input list="incomeOptions" id="incomeRange" name="incomeRange" />
+            <datalist id="incomeOptions">
+              <option value="Below ₦500,000"></option>
+              <option value="₦500,000 - ₦2,000,000"></option>
+              <option value="₦2,000,001 - ₦5,000,000"></option>
+              <option value="Above ₦5,000,000"></option>
+            </datalist>
+          </p>
+
+          <p>
+            <label for="fundSource">Source of funds</label><br />
+            <input id="fundSource" name="fundSource" type="text" />
+          </p>
+
+          <p>
+            <label for="nextOfKinName">Next of kin - name</label><br />
+            <input id="nextOfKinName" name="nextOfKinName" type="text" />
+          </p>
+
+          <p>
+            <label for="nextOfKinRel">Next of kin - relationship</label><br />
+            <input id="nextOfKinRel" name="nextOfKinRel" type="text" />
+          </p>
+
+          <p>
+            <label for="nextOfKinContact">Next of kin - contact</label><br />
+            <input id="nextOfKinContact" name="nextOfKinContact" type="tel" />
+          </p>
+
+          <p>
+            <label for="nextOfKinAddr">Next of kin - address</label><br />
+            <textarea id="nextOfKinAddr" name="nextOfKinAddr" rows="2"></textarea>
+          </p>
+        </fieldset>
+      </section>
+
+      <!-- Account Preferences -->
+      <section aria-labelledby="pref-heading">
+        <h3 id="pref-heading">Account Preferences</h3>
+
+        <fieldset>
+          <legend>Account choices</legend>
+
+          <p>
+            <label for="accountType">Type of account <span aria-hidden="true">*</span></label><br />
+            <select id="accountType" name="accountType" required>
+              <option value="">Select account type</option>
+              <option value="savings">Savings</option>
+              <option value="current">Current</option>
+              <option value="domiciliary">Domiciliary</option>
+              <option value="corporate">Corporate</option>
+            </select>
+          </p>
+
+          <p>
+            <label for="preferredBranch">Preferred branch</label><br />
+            <input id="preferredBranch" name="preferredBranch" type="text" />
+          </p>
+
+          <p>
+            <label for="modeOfOperation">Mode of operation</label><br />
+            <select id="modeOfOperation" name="modeOfOperation">
+              <option value="">Select</option>
+              <option value="single">Single signatory</option>
+              <option value="joint">Joint signatory</option>
+              <option value="others">Others</option>
+            </select>
+          </p>
+
+          <fieldset>
+            <legend>Additional services</legend>
+            <p>
+              <input type="checkbox" id="svc-atm" name="services" value="atm" />
+              <label for="svc-atm">ATM card</label>
+            </p>
+            <p>
+              <input type="checkbox" id="svc-mobile" name="services" value="mobile" />
+              <label for="svc-mobile">Mobile banking</label>
+            </p>
+            <p>
+              <input type="checkbox" id="svc-internet" name="services" value="internet" />
+              <label for="svc-internet">Internet banking</label>
+            </p>
+            <p>
+              <input type="checkbox" id="svc-cheque" name="services" value="cheque" />
+              <label for="svc-cheque">Cheque book</label>
+            </p>
+          </fieldset>
+        </fieldset>
+      </section>
+
+      <!-- Form actions -->
+      <footer>
+        <section aria-label="Form actions">
+          <button type="submit">Review details</button>
+          <button type="reset">Reset</button>
+        </section>
+      </footer>
+    </form>
+  </main>
+
+  <footer role="contentinfo">
+    <p>Contact support: <a href="tel:+2348000000001">+234 800 000 0001</a> | <a href="mailto:support@lillymfb.co.org">support@lillymfb.co.org</a></p>
+  </footer>
+</body>
+</html>
