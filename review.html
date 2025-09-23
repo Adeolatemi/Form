@@ -8,7 +8,7 @@
 <body>
   <a href="#main">Skip to content</a>
 
-  <header role="banner">
+  <header>
     <h1>Review Submitted Details</h1>
     <p id="review-intro">Use <kbd>Tab</kbd> to navigate the tables. Each table summarizes a group of form inputs.</p>
   </header>
@@ -23,13 +23,13 @@
     </ul>
   </nav>
 
-  <main id="main" tabindex="0" role="main" aria-labelledby="review-heading">
+  <main id="main" tabindex="0" aria-labelledby="review-heading">
     <h2 id="review-heading">Summary of entered information</h2>
 
     <!-- Personal information table -->
     <section aria-labelledby="personal-table-heading">
       <h3 id="personal-table-heading">Personal Information</h3>
-      <table id="personal-table" summary="Personal details such as name, birth date, contact info" tabindex="0">
+      <table id="personal-table" tabindex="0" border="1">
         <caption>Personal information</caption>
         <thead>
           <tr>
@@ -54,7 +54,7 @@
     <!-- Identification table -->
     <section aria-labelledby="identification-table-heading">
       <h3 id="identification-table-heading">Identification</h3>
-      <table id="identification-table" summary="ID type, number, issue and expiry dates" tabindex="0">
+      <table id="identification-table" tabindex="0" border="1">
         <caption>Identification details</caption>
         <thead>
           <tr><th scope="col">Field</th><th scope="col">Value</th></tr>
@@ -74,7 +74,7 @@
     <!-- Employment & Financial -->
     <section aria-labelledby="employment-table-heading">
       <h3 id="employment-table-heading">Employment & Financial Information</h3>
-      <table id="employment-table" summary="Employment and next of kin details" tabindex="0">
+      <table id="employment-table" tabindex="0" border="1">
         <caption>Employment and financial details</caption>
         <thead>
           <tr><th scope="col">Field</th><th scope="col">Value</th></tr>
@@ -95,7 +95,7 @@
     <!-- Account Preferences -->
     <section aria-labelledby="preferences-table-heading">
       <h3 id="preferences-table-heading">Account Preferences</h3>
-      <table id="preferences-table" summary="Selected account type, branch and services" tabindex="0">
+      <table id="preferences-table" tabindex="0" border="1">
         <caption>MFB Account preferences</caption>
         <thead>
           <tr><th scope="col">Field</th><th scope="col">Value</th></tr>
@@ -111,4 +111,16 @@
 
     <!-- Actions -->
     <nav aria-label="Review actions">
-     
+      <ul>
+        <li><a href="form.html">Edit details</a></li>
+        <li><a href="#">Confirm & Submit</a></li>
+      </ul>
+    </nav>
+  </main>
+
+  <footer>
+    <p>Contact support: <a href="tel:+2348000000001">+234 800 000 0001</a> | 
+      <a href="mailto:support@lillymfb.co.org">support@lillymfb.co.org</a></p>
+  </footer>
+</body>
+</html>

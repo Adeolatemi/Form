@@ -6,12 +6,11 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
 </head>
 <body>
-  <!-- Skip link for keyboard users -->
   <a href="#main">Skip to content</a>
 
-  <header role="banner">
+  <header>
     <h1>Individual Account Opening</h1>
-    <p id="intro">This form should be completed in CAPITAL LETTERS. Characters and mark should be similar in style to the following</p>
+    <p id="intro">This form should be completed in CAPITAL LETTERS. Characters and marks should be similar in style to the following</p>
   </header>
 
   <nav aria-label="Primary">
@@ -21,7 +20,7 @@
     </ul>
   </nav>
 
-  <main id="main" tabindex="0" role="main" aria-labelledby="form-heading">
+  <main id="main" tabindex="0" aria-labelledby="form-heading">
     <h2 id="form-heading">Account Opening Form</h2>
 
     <form action="review.html" method="get" novalidate aria-describedby="form-instructions">
@@ -33,17 +32,14 @@
 
         <fieldset>
           <legend>Full name & basic details</legend>
-
           <p>
             <label for="fullName">Full name (as on ID) <span aria-hidden="true">*</span></label><br />
             <input id="fullName" name="fullName" type="text" required autocomplete="name" placeholder="Surname Firstname Middlename" />
           </p>
-
           <p>
             <label for="dob">Date of birth <span aria-hidden="true">*</span></label><br />
             <input id="dob" name="dob" type="date" required />
           </p>
-
           <p>
             <label for="gender">Gender</label><br />
             <select id="gender" name="gender" autocomplete="sex">
@@ -54,7 +50,6 @@
               <option value="other">Other</option>
             </select>
           </p>
-
           <p>
             <label for="maritalStatus">Marital status</label><br />
             <select id="maritalStatus" name="maritalStatus">
@@ -65,7 +60,6 @@
               <option>Widowed</option>
             </select>
           </p>
-
           <p>
             <label for="nationality">Nationality</label><br />
             <input id="nationality" name="nationality" type="text" autocomplete="country-name" />
@@ -74,22 +68,18 @@
 
         <fieldset>
           <legend>Contact & Address</legend>
-
           <p>
             <label for="resAddress">Residential address (permanent)</label><br />
             <textarea id="resAddress" name="resAddress" rows="3" autocomplete="street-address"></textarea>
           </p>
-
           <p>
             <label for="currAddress">Current address (only if different)</label><br />
             <textarea id="currAddress" name="currAddress" rows="3"></textarea>
           </p>
-
           <p>
             <label for="phone">Phone number <span aria-hidden="true">*</span></label><br />
             <input id="phone" name="phone" type="tel" required autocomplete="tel" placeholder="+234 800 000 0000" />
           </p>
-
           <p>
             <label for="email">Email address</label><br />
             <input id="email" name="email" type="email" autocomplete="email" placeholder="name@example.com" />
@@ -100,10 +90,8 @@
       <!-- Identification -->
       <section aria-labelledby="id-heading">
         <h3 id="id-heading">Identification</h3>
-
         <fieldset>
           <legend>Official identification</legend>
-
           <p>
             <label for="idType">Means of identification <span aria-hidden="true">*</span></label><br />
             <select id="idType" name="idType" required>
@@ -115,32 +103,26 @@
               <option value="other">Other</option>
             </select>
           </p>
-
           <p>
             <label for="idNumber">ID number</label><br />
             <input id="idNumber" name="idNumber" type="text" />
           </p>
-
           <p>
             <label for="issueDate">Issue date</label><br />
             <input id="issueDate" name="issueDate" type="date" />
           </p>
-
           <p>
             <label for="expiryDate">Expiry date</label><br />
             <input id="expiryDate" name="expiryDate" type="date" />
           </p>
-
           <p>
             <label for="placeOfIssue">Place of issue</label><br />
             <input id="placeOfIssue" name="placeOfIssue" type="text" />
           </p>
-
           <p>
             <label for="tin">Tax Identification Number (TIN)</label><br />
             <input id="tin" name="tin" type="text" inputmode="numeric" />
           </p>
-
           <p>
             <label for="bvn">Bank Verification Number (BVN)</label><br />
             <input id="bvn" name="bvn" type="text" inputmode="numeric" pattern="\d{11}" aria-describedby="bvn-help" />
@@ -152,20 +134,16 @@
       <!-- Employment & Financial -->
       <section aria-labelledby="emp-heading">
         <h3 id="emp-heading">Employment & Financial Information</h3>
-
         <fieldset>
           <legend>Employment</legend>
-
           <p>
             <label for="occupation">Occupation / Job title</label><br />
             <input id="occupation" name="occupation" type="text" />
           </p>
-
           <p>
             <label for="employer">Employer / Business name</label><br />
             <input id="employer" name="employer" type="text" />
           </p>
-
           <p>
             <label for="employerAddress">Employer / Business address</label><br />
             <textarea id="employerAddress" name="employerAddress" rows="2"></textarea>
@@ -174,7 +152,6 @@
 
         <fieldset>
           <legend>Financial details</legend>
-
           <p>
             <label for="incomeRange">Annual income range</label><br />
             <input list="incomeOptions" id="incomeRange" name="incomeRange" />
@@ -185,27 +162,22 @@
               <option value="Above ₦5,000,000"></option>
             </datalist>
           </p>
-
           <p>
             <label for="fundSource">Source of funds</label><br />
             <input id="fundSource" name="fundSource" type="text" />
           </p>
-
           <p>
             <label for="nextOfKinName">Next of kin - name</label><br />
             <input id="nextOfKinName" name="nextOfKinName" type="text" />
           </p>
-
           <p>
             <label for="nextOfKinRel">Next of kin - relationship</label><br />
             <input id="nextOfKinRel" name="nextOfKinRel" type="text" />
           </p>
-
           <p>
             <label for="nextOfKinContact">Next of kin - contact</label><br />
             <input id="nextOfKinContact" name="nextOfKinContact" type="tel" />
           </p>
-
           <p>
             <label for="nextOfKinAddr">Next of kin - address</label><br />
             <textarea id="nextOfKinAddr" name="nextOfKinAddr" rows="2"></textarea>
@@ -216,10 +188,8 @@
       <!-- Account Preferences -->
       <section aria-labelledby="pref-heading">
         <h3 id="pref-heading">Account Preferences</h3>
-
         <fieldset>
           <legend>Account choices</legend>
-
           <p>
             <label for="accountType">Type of account <span aria-hidden="true">*</span></label><br />
             <select id="accountType" name="accountType" required>
@@ -230,12 +200,10 @@
               <option value="corporate">Corporate</option>
             </select>
           </p>
-
           <p>
             <label for="preferredBranch">Preferred branch</label><br />
             <input id="preferredBranch" name="preferredBranch" type="text" />
           </p>
-
           <p>
             <label for="modeOfOperation">Mode of operation</label><br />
             <select id="modeOfOperation" name="modeOfOperation">
@@ -245,41 +213,9 @@
               <option value="others">Others</option>
             </select>
           </p>
-
           <fieldset>
             <legend>Additional services</legend>
-            <p>
-              <input type="checkbox" id="svc-atm" name="services" value="atm" />
-              <label for="svc-atm">ATM card</label>
-            </p>
-            <p>
-              <input type="checkbox" id="svc-mobile" name="services" value="mobile" />
-              <label for="svc-mobile">Mobile banking</label>
-            </p>
-            <p>
-              <input type="checkbox" id="svc-internet" name="services" value="internet" />
-              <label for="svc-internet">Internet banking</label>
-            </p>
-            <p>
-              <input type="checkbox" id="svc-cheque" name="services" value="cheque" />
-              <label for="svc-cheque">Cheque book</label>
-            </p>
-          </fieldset>
-        </fieldset>
-      </section>
-
-      <!-- Form actions -->
-      <footer>
-        <section aria-label="Form actions">
-          <button type="submit">Review details</button>
-          <button type="reset">Reset</button>
-        </section>
-      </footer>
-    </form>
-  </main>
-
-  <footer role="contentinfo">
-    <p>Contact support: <a href="tel:+2348000000001">+234 800 000 0001</a> | <a href="mailto:support@lillymfb.co.org">support@lillymfb.co.org</a></p>
-  </footer>
-</body>
-</html>
+            <p><input type="checkbox" id="svc-atm" name="services" value="atm" /> <label for="svc-atm">ATM card</label></p>
+            <p><input type="checkbox" id="svc-mobile" name="services" value="mobile" /> <label for="svc-mobile">Mobile banking</label></p>
+            <p><input type="checkbox" id="svc-internet" name="services" value="internet" /> <label for="svc-internet">Internet banking</label></p>
+            <p><input type="checkbox" id="svc-cheque" name="services" value="che
